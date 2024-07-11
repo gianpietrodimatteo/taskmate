@@ -1,0 +1,17 @@
+/* .list-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  background-color: #f9f9f9;
+} */
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: var(--max-width);
+  width: 100%;
+  margin-bottom: 24px;
+}

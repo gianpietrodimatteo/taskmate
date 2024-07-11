@@ -1,0 +1,128 @@
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  user-select: none;
+  color: var(--tint-color-2);
+
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+
+  user-select: none;
+  transition: opacity 0.2s ease, border 0.2s ease;
+}
+
+.dragging {
+  opacity: 0.8;
+  border: 2px dashed #aaa;
+  background-color: var(--shade-2);
+
+  cursor: move; /* fallback: no `url()` support or images disabled */
+  cursor: -webkit-grabbing; /* Chrome 1-21, Safari 4+ */
+  cursor: -moz-grabbing; /* Firefox 1.5-26 */
+  cursor: grabbing; /* W3C standards syntax, should come least */
+}
+
+.position {
+  font-size: 1.8rem;
+  width: 3rem;
+  background-color: transparent;
+  border: none;
+  color: var(--tint-color-2);
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+.position::placeholder {
+  color: var(--tint-color-2);
+}
+
+.position::-webkit-inner-spin-button,
+.position::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Checkbox */
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d8dbff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #d8dbff;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.checkbox:checked + .checkmark::after {
+  opacity: 1;
+}
+
+/* Task name */
+
+.task-name {
+  background-color: transparent;
+  border: transparent;
+  color: #d8dbff;
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 1rem;
+  resize: none;
+}
+
+.task-name::placeholder {
+  color: #d8dbff;
+}
+
+.description {
+  background-color: transparent;
+  border: transparent;
+  color: #d8dbff;
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 1rem;
+  resize: none;
+}
+
+.description::placeholder {
+  color: #d8dbff;
+}
+
+.item-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--tint-color-2);
+}

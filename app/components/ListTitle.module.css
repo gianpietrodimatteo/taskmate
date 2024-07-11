@@ -1,0 +1,52 @@
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.title-text,
+.title-input {
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+
+  color: var(--tint-color-2);
+
+  height: 77px;
+
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  box-sizing: border-box;
+}
+
+.title-input::placeholder {
+  color: var(--tint-color-2);
+}
+
+.button {
+  margin: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--tint-color-2);
+}
+
+.cancel-button {
+}
+
+.save-button {
+}
+
+.edit-button {
+}

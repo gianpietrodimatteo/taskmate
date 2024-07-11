@@ -1,0 +1,32 @@
+.item-manager {
+  margin-bottom: 20px;
+}
+
+.item-manager input {
+  margin-right: 5px;
+}
+
+.item-manager button {
+  margin-left: 5px;
+}
+.item-manager button {
+  background-color: var(--tint-color-1);
+  border-radius: 5px;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.item-manager button:hover {
+  background-color: var(--shade-1);
+}
+
+.add-item-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--tint-color-2);
+}
