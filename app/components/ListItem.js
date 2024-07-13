@@ -79,37 +79,41 @@ const ListItem = ({
         </>
       ) : (
         <>
-          <span className={styles.position}>{item.position}</span>
-          <label className={styles["checkbox-container"]}>
-            <input
-              type="checkbox"
-              name="completed"
-              className={styles.checkbox}
-              checked={item.completed}
-              onChange={() =>
-                updateItem(index, { ...item, completed: !item.completed })
-              }
-            />
-            <span className={styles.checkmark}></span>
-          </label>
-          <span className={styles["task-name"]}>{name}</span>
-          <button className={styles["item-button"]} onClick={handleEdit}>
-            <BsPencilFill />
-          </button>
-          <button
-            className={styles["item-button"]}
-            onClick={() => handleDelete(index)}
-          >
-            <BsTrashFill />
-          </button>
-          <button
-            className={styles["item-button"]}
-            onClick={handleShowDescription}
-          >
-            {showDescription ? <BsChevronLeft /> : <BsChevronDown />}
-          </button>
+          <div className={styles["item-container"]}>
+            <span className={styles.position}>{item.position}</span>
+            <label className={styles["checkbox-container"]}>
+              <input
+                type="checkbox"
+                name="completed"
+                className={styles.checkbox}
+                checked={item.completed}
+                onChange={() =>
+                  updateItem(index, { ...item, completed: !item.completed })
+                }
+              />
+              <span className={styles.checkmark}></span>
+            </label>
+            <span className={styles["task-name"]}>{name}</span>
+            <button className={styles["item-button"]} onClick={handleEdit}>
+              <BsPencilFill />
+            </button>
+            <button
+              className={styles["item-button"]}
+              onClick={() => handleDelete(index)}
+            >
+              <BsTrashFill />
+            </button>
+            <button
+              className={styles["item-button"]}
+              onClick={handleShowDescription}
+            >
+              {showDescription ? <BsChevronLeft /> : <BsChevronDown />}
+            </button>
+          </div>
           {showDescription && (
-            <p className={styles.description}>{description}</p>
+            <div className={styles["description-container"]}>
+              <p className={styles.description}>{description}</p>
+            </div>
           )}
         </>
       )}
