@@ -5,6 +5,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 32px;
+  width: var(--max-width);
 }
 
 .title-text,

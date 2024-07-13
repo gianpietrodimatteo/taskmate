@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: var(--max-width);
+  justify-content: flex-end;
+}
+
+.input {
+  padding: 5px;
+  /* border: 1px solid #ddd; */
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  background-color: var(--shade-2);
+
+  color: var(--tint-color-2);
+}
+
+.input::placeholder {
+  color: var(--tint-color-2);
+}
+
+.button {
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--tint-color-2);
+  color: var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--shade-1);
+  color: var(--tint-color-1);
+}
