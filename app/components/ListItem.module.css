@@ -1,7 +1,8 @@
 .list-item {
   display: flex;
-  align-items: center;
-  gap: 1.6rem;
+  align-items: flex-start;
+  gap: 0.8rem;
+  flex-direction: column;
 
   padding: 10px;
   margin-bottom: 5px;
@@ -27,6 +28,13 @@
   cursor: -webkit-grabbing; /* Chrome 1-21, Safari 4+ */
   cursor: -moz-grabbing; /* Firefox 1.5-26 */
   cursor: grabbing; /* W3C standards syntax, should come least */
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  width: 100%;
 }
 
 .position {
